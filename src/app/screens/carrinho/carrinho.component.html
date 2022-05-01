@@ -1,0 +1,40 @@
+<div class="container">
+  <mat-card style="border-radius: 10px;">
+    <div class="header">
+      <h1>Meu Carrinho</h1>
+    </div>
+    <hr>
+
+    <ng-container *ngFor="let item of dataCarrinho.items">
+      <div class="product-card">
+        <img class="imagem" [src]="item.imageUrl" alt="trufa">
+        <div class="textos-card">
+          <h3 class="nome">{{ item.name }}</h3>
+          <p class="preco">R$ {{ (item.price / 100).toString().replace(".", ",") }}</p>
+          <h4 class="precoNegrito">R$ {{ (item.sellingPrice / 100).toString().replace(".", ",") }}</h4>
+        </div>
+      </div>
+    </ng-container>
+
+
+    <hr>
+
+    <div class="div-preco">
+      <div class="texto-preco">
+        <h2>Total</h2>
+        <h2>R$ {{ (dataCarrinho.totalizers[0].value / 100).toString().replace(".", ",") }}</h2>
+      </div>
+      <div class="desconto-container">
+        <div class="desconto" *ngIf="dataCarrinho.totalizers[0].value / 100 > 10">
+          <h3>Parabéns, sua compra tem frete grátis !</h3>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="footer">
+      <button mat-raised-button color="primary" style="width: 90%;">Finalizar compra</button>
+    </div>
+  </mat-card>
+</div>

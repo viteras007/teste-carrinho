@@ -1,0 +1,71 @@
+.container {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background-color: gray;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  min-height: 100vh;
+  font-family: 'Poppins';
+  hr {
+    width: 100%;
+  }
+  .header {
+    display: flex;
+    justify-content: center;
+  }
+  .product-card {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    padding: 20px;
+    align-items: center;
+
+    .imagem {
+      width: 100px;
+      height: 100px;
+      border: 2px solid #ccc;
+      padding: 20px;
+    }
+    .textos-card {
+      .preco {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  .div-preco {
+    display: flex;
+    flex-direction: column;
+    .texto-preco {
+      display: flex;
+      justify-content: space-between;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .desconto-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .desconto {
+        display: flex;
+        justify-content: center !important;
+        align-items: center !important;
+        background-color: #99ff99;
+        color: green;
+        border-radius: 40px;
+        width: 80%;
+      }
+    }
+  }
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      height: 50px;
+      font-size: 1.2em;
+    }
+  }
+}
